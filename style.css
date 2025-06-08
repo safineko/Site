@@ -1,20 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 body {
-  background-color: #1e1e2f;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* preto sinistro */
+  color: #00ff00; /* verde neon hacker */
+  font-family: 'Share Tech Mono', monospace; /* fonte máquina de escrever hacker */
   padding: 2rem;
   text-align: center;
+  text-shadow: 0 0 10px #00ff00;
 }
 
 h1 {
-  color: #ff66cc;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: flicker 2s infinite alternate;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  animation: flicker 3s infinite alternate;
 }
 
 a {
-  color: #66ccff;
+  color: #00ff00;
   text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #00ff00;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #00cc00;
+  border-bottom-color: #00cc00;
+}
+
+/* efeito de piscar estilo terminal hacker */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
 }
