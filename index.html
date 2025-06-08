@@ -1,18 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <title>Site da Safineko</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Olá, eu sou a Safineko 🐾</h1>
-    <p>Esse é meu primeiro site, feito do zero!</p>
-    <p>Siga meus links abaixo:</p>
-    <ul>
-      <li><a href="https://github.com/safineko" target="_blank">Meu GitHub</a></li>
-      <li><a href="#">Portfólio</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terminal Safineko</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #000000;
+      color: #00ff00;
+      font-family: 'Share Tech Mono', monospace;
+      padding: 2rem;
+      text-align: center;
+      text-shadow: 0 0 10px #00ff00;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: flicker 2s infinite alternate;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      animation: flicker 3s infinite alternate;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: inline-flex;
+      gap: 2rem;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #00ff00;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 1px solid #00ff00;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    }
+
+    a:hover {
+      color: #00cc00;
+      border-bottom-color: #00cc00;
+    }
+
+    /* efeito de piscar estilo terminal hacker */
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.4;
+        text-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vinda ao terminal Safineko</h1>
+  <p>Hackeando a Matrix, um código por vez.</p>
+  <p>Veja meu repositório e projetos:</p>
+  <ul>
+    <li><a href="https://github.com/safineko" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a href="#">Portfólio</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+</body>
 </html>
